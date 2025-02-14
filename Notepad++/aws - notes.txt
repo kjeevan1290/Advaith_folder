@@ -1,0 +1,56 @@
+sqs
+1 to 14 days
+1 to 256 kb
+
+sns --> sqs, lambda, datafirhose
+email, sms, http https
+
+data streams --> lambda, data analytics, data firehose, 
+producers: apps, iot , sdk scl
+
+firehose --> s3, redshit, opensearch, splunk, data dog, monodb
+apply transformations throuh lambda
+http end
+
+Other services
+====================
+
+1)cloud formation - we can upload the yaml file to create the ec2 instances and all configurtion to other aws services.
+                    we can update the stack by uploading a new yaml so that it will add additional services
+  
+  a) Application composer - we can desing the graph - like drag and drop all the aws services and connect them with other services.
+  
+2) SES - amazon simple email service 
+
+3) Amazon pinpoint - email, SMS, push, voice, and in-app messaging
+
+4) Systems Manager – SSM Session Manager - 
+     Allows you to start a secure shell on your EC2 and 
+     on-premises server
+    • No SSH access, bastion hosts, or SSH keys needed to connect to ec2 instances
+	• No port 22 needed (better security)
+	• Supports Linux, macOS, and Windows
+	* useful to connect across all accounts
+
+5) cost explorer - • Analyze your data at a high level: total costs and usage across all accounts 
+                   • Or Monthly, hourly, resource level granularity
+				   
+				   
+
+6) Origin Access Control (OAC) - in AWS refers to a security mechanism used to control access to a content origin (such as an Amazon S3 bucket) when serving content through Amazon CloudFront. 
+It ensures that only CloudFront can access the content stored in the origin, protecting it from direct public access.				   
+						
+						
+7) ACLs (Access Control Lists) in AWS are primarily associated with Amazon S3 for managing access to buckets and objects. 
+However, ACLs are also used in other AWS services, such as:
+ Network ACLs: These are used in Amazon VPC (Virtual Private Cloud) to control inbound and outbound traffic at the subnet level.
+                Network ACLs act as a stateless firewall, evaluating traffic based on rules defined within them2.
+ AWS WAF (Web Application Firewall): ACLs can be used to create rules that allow, block, or count web requests based on conditions 
+                                     that you specify, such as IP addresses or query strings.
+									 
+8) In AWS, an Access Control List (ACL) is a mechanism used to manage access to resources like S3 buckets and objects. Here are some key points about ACLs in AWS:
+Resource Attachment: Each bucket and object in Amazon S3 has an ACL attached to it as a subresource.
+Purpose: ACLs define which AWS accounts or groups are granted access and the type of access (e.g., read, write) to a resource1.
+Permissions: ACLs allow you to grant specific permissions to other AWS accounts or predefined groups. For example, you can grant read access to a specific user or group2.
+Default Settings: By default, the owner of the bucket or object has full control. You can modify the ACL to grant additional permissions2.
+Modern Use: Many modern use cases no longer require ACLs, as access management policies can be used instead. AWS recommends disabling ACLs unless you need to control access for each object individually.									 
